@@ -54,11 +54,34 @@ async function getBirthPerYear(year, gender) {
       sum += result2.records[i].fields.occurrence;
     }
   }
-  console.log(sum);
+  console.log(sum + ' ' + gender + " were born in " + `${year}`);
 };
 
-getBirthPerYear(2021,"FILLE");
-getBirthPerYear(2021, "GARCON");
-getOccurrence("Juliette", 2021);
+getBirthPerYear(2010,"FILLE");
+getBirthPerYear(2011,"FILLE");
+getBirthPerYear(2012,"FILLE");
+getBirthPerYear(2013,"FILLE");
+getBirthPerYear(2014,"FILLE");
+getBirthPerYear(2015,"FILLE");
 
 
+const ctx = document.getElementById('myChart')
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
