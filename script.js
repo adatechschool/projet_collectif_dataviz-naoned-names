@@ -29,24 +29,39 @@ async function getBirthPerYear(year, gender) {
 }
 
 (async () => {
-  const first = await getBirthPerYear(2010, "FILLE");
-  const second = await getBirthPerYear(2011, "FILLE");
+  // const first = await getBirthPerYear(2010, "FILLE");
+  // const second = await getBirthPerYear(2011, "FILLE");
+
+  let arrBirthRateF = []
+  let arrYears = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2020,2021];
+
+  for(let i=0; i<arrYears.length; i++){
+    await arrBirthRateF.push(await getBirthPerYear(arrYears[i],"FILLE"))
+  }
+  console.log(arrBirthRateF)
+
+  let arrBirthRateM = []
+
+  for(let i=0; i<arrYears.length; i++){
+    await arrBirthRateM.push(await getBirthPerYear(arrYears[i],"GARCON"))
+  }
+  console.log(arrBirthRateM)
 
   const ctx = document.getElementById("myChart");
 
   new Chart(ctx, {
     type: "line",
     data: {
-      labels: ["2010","2011"],
+      labels: ["2010","2011","2012","2013","2014","2015","2016","2017","2018","2020","2021"],
       datasets: [
         {
           label: "female birth rate",
-          data: [first, second],
+          data: arrBirthRateF,
           borderWidth: 1,
         },
         {
           label: "male birth rate",
-          data: [14, 10, 5, 2, 3, 1],
+          data: arrBirthRateM,
           borderWidth: 1,
         },
       ],
