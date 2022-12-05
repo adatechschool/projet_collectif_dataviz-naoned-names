@@ -1,4 +1,5 @@
 /* BIENVENUE  */
+
 .container {
     display : flex;
     flex-direction: column;
@@ -13,21 +14,29 @@
 
 .logo {
     animation: animate 2s linear infinite;
+    width: 150px;
+    height: 150px;
 }
 
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+   /* flex-direction: column; */
+}
 button {
     background: transparent;
-    color: rgb(119, 144, 255);
+    color: rgb(138, 9, 170);
     border: 0;
-    font-size: 1.5em;
+    font-size: 1em;
     cursor: pointer;
     position: relative;
-    padding: 20px 50px;
+    padding: 10px 25px;
     transition: all .25s;
   }
   
   button::after, button::before {
-    border: 3px solid rgb(253, 122, 231);
+    border: 3px solid rgb(21, 238, 68);
     content:'';
     position: absolute;
     width: 100%;
@@ -45,14 +54,14 @@ button {
     transform: translate(5px, 5px);
   }
 
-@keyframes animate {
-    0% {
-        filter: hue-rotate(0deg);
+    @keyframes animate {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            filter: hue-rotate(360deg);
+        }
     }
-    100% {
-        filter: hue-rotate(360deg);
-    }
-}
 
 
 /* NAISSANCES */
@@ -75,5 +84,7 @@ button {
 
 .chart-container {
     position : absolute;
-    margin-left: 9%;
+    margin-left: 12%;
+    width: 80%;
+    height: 80%;
 }
