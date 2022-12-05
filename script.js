@@ -33,7 +33,7 @@ async function getBirthPerYear(year, gender) {
   // const second = await getBirthPerYear(2011, "FILLE");
 
   let arrBirthRateF = []
-  let arrYears = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2020,2021];
+  let arrYears = [2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2020,2021];
 
   for(let i=0; i<arrYears.length; i++){
     await arrBirthRateF.push(await getBirthPerYear(arrYears[i],"FILLE"))
@@ -52,7 +52,7 @@ async function getBirthPerYear(year, gender) {
   new Chart(ctx, {
     type: "line",
     data: {
-      labels: ["2010","2011","2012","2013","2014","2015","2016","2017","2018","2020","2021"],
+      labels: ["2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2020","2021"],
       datasets: [
         {
           label: "female birth rate",
