@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naoned Name</title>
-    <link href="style.css" rel="stylesheet" type="texte/css"/>
+        <meta charset="UTF-8">
+        <title>Prénoms</title>
+        <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+        <div class="title_prenoms">
+                <a href=bienvenue.html><img src="assets/logoNaonedNameV1.png" alt="logo" class="logo" /></a>
 
-    <img src="assets/logoNaonedNameV1.png" alt="logo" class="logo" />
+                <h1 class="h1_prenoms">Occurrence des prénoms donnés entre 2001 et 2021</h1>
+        </div>
 
-    <ul>
-        <input class="favorite styled"
-                type="button"
-                value="bienvenue">
-                <a href="bienvenue.html"></a>
+      
+        <input type="text" placeholder="Entrez une valeur ici" id="in">
+        <button type="button" onclick="getValue();">Valider</button>
 
-        <input class="favorite styled"
-                type="button"
-                value="naissances">
-                <a href="naissances.html"></a>
-        
-        <input class="favorite styled"
-                type="button"
-                value="garcons et filles">
-                <a href="garçonsetfilles.html"></a>
 
-        <input class="favorite styled"
-                type="button"
-                value="prénom">
-                <a href="prénom.html"></a>
-    </ul>
-// creation d'une section sur le site bienvenue
-    <section id="Bienvenue">
-        <h1>
-         bienvenue  sur NaonedName
-        </h1>
-      </section>
-// creation d'une section sur le site pour inclure le graphique dynamique
-      <section id="graphique dynamtique">
-        <h2>
-          Evolution des naissance 
-        </h2>
-// inclure le JS dynamique
-    
-      </section>
+        <div class="chart-container">
+                <canvas id="myChart"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script2.js"></script>
+
+
 </body>
+
 </html>

@@ -1,5 +1,4 @@
 /* BIENVENUE  */
-
 .container {
     display : flex;
     flex-direction: column;
@@ -19,10 +18,8 @@
 }
 
 /* BUTTONS */
-
 .buttons {
     display: flex;
-   /* flex-direction: column; */
 }
 button {
     background: transparent;
@@ -69,12 +66,6 @@ button {
     display: flex;
 }
 
-
-.logo_naissances {
-    width: 15Opx;
-    height: 150px;
-}
-
 .h1_naissances {
     position:absolute;
     margin-left: 20%;
@@ -88,3 +79,6 @@ button {
     width: 80%;
     height: 80%;
 }
+
+/* PRENOM */
+
