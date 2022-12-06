@@ -16,7 +16,10 @@ async function getValue() {
   // Sélectionner l'élément input et récupérer sa valeur
   let input = document.getElementById("in").value;
   // Afficher la valeur
-  // alert(input);
+  // alert(input); 
+
+  // const first = await getOccurrence("Juliette", 2020)
+  // const second = await getOccurrence("Juliette", 2021)
 
   let arrOccurrence = [];
   let arrYears = [
@@ -32,7 +35,7 @@ async function getValue() {
   const ctx = document.getElementById("myChart");
 
   new Chart(ctx, {
-    type: "line",
+    type: "bar",
     data: {
       labels: [
         "2001",
