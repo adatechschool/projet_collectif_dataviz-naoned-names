@@ -1,6 +1,15 @@
+@font-face {
+  font-family: 'dayrom';
+  src: url('polices/dayrom-webfont.woff2') format('woff2'),
+       url('polices/dayrom-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* BIENVENUE  */
 body {
-    background-color: bisque;
+    background-color: wheat;
+    font-family: Arial;
 }
 .container {
     display : flex;
@@ -9,8 +18,10 @@ body {
 }
 
 .title {
-    color: blueviolet;
+    color: black; 
     text-align: center;
+    font-family: 'dayrom';
+    color: rgb(138, 45, 182);
 }
 
 .logo {
@@ -19,31 +30,41 @@ body {
     height: 150px;
 }
 
+.questions {
+  position: center;
+  color: rgb(59, 59, 61);
+  font-family: Arial;
+}
+
+
 /* BUTTONS */
 .buttons {
     display: flex;
 }
+
 button {
-    background: transparent;
-    color: rgb(138, 9, 170);
-    border: 0;
-    font-size: 1em;
-    cursor: pointer;
-    position: relative;
-    padding: 10px 25px;
-    transition: all .25s;
-  }
+  background: transparent;
+  color: rgb(8, 146, 238);
+  border: 0;
+  font-size: 1em;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 25px;
+  transition: all .25s;
+}
   
-  button::after, button::before {
-    border: 3px solid rgb(21, 238, 68);
-    content:'';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transition: all .25s;
-  }
+button::after, button::before {
+  border: 3px solid rgb(153, 44, 204);
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all .25s;
+}
+
+
   
   button:hover::after {
     transform: translate(-5px, -5px);
@@ -72,7 +93,8 @@ button {
     position:absolute;
     margin-left: 20%;
     margin-top: 3%;
-    color: blueviolet;
+    color: rgb(138, 45, 182);
+    font-family: 'dayrom';
 }
 
 .chart-container {
@@ -91,7 +113,8 @@ button {
     position:absolute;
     margin-left: 20%;
     margin-top: 3%;
-    color: blueviolet;
+    color: rgb(138, 45, 182);
+    font-family: 'dayrom';
 }
 
 .chart-container {
@@ -101,142 +124,63 @@ button {
     height: 80%;
 }
 
+
+/* FOOTER */
+footer {
+  display: flex;
+  text-align: center;
+}
+
+.footer_title {
+  font-family: 'dayrom';
+  color: rgb(138, 45, 182);
+  font-size: small;
+}
+
+#mes_photos img {
+  height: 100px;
+}
+
+
 /* LOADER */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
-
-* {
-  margin:0;
-  padding:0;
-  outline:none;
-  list-style:none;
-  text-decoration:none;
-  box-sizing:border-box;
-  color:#000;
-  background: transparent;
-  border:none;
+p {
+  margin: 1rem;
+  font-family: 'dayrom';
+  color:rgb(153, 44, 204);
 }
 
-html, body {
-  height: 100%;
-  width: 100%;  
+#gelatine {
+  margin: 2rem auto;
 }
 
-body {
-  background: #202020;
-  font-family: 'Roboto', sans-serif;
-}
-
-.loader {
-  position: fixed;
-  height: 100%;
+.cell {
+  display: inline-block;
   width: 100%;
-  background: -webkit-linear-gradient( -90deg, #3fa9f5, #3f8cf5);
-  background: -moz-linear-gradient( -90deg, #3fa9f5, #3f8cf5);
-  background: -ms-linear-gradient( -90deg, #3fa9f5, #3f8cf5);
-  background: -o-linear-gradient( -90deg, #3fa9f5, #3f8cf5);
-  background: linear-gradient( to bottom, #3fa9f5, #3f8cf5)
+  text-align: center;
 }
 
-.wrap-ball {
-  position: absolute;
-  top: 0;left: 0;right: 0;bottom: 0;
-  margin: auto;
-  height: 200px;
-  width: 200px;
-}
-
-.loader p {
-  height: 30px;
-  font-size:60px;
-  color: rgba(0,0,0,0.1);
-  position: absolute;
-  text-align:center;
-  left:0;right:0;
-  bottom:0;top:0;
-  margin:auto;
-}
-
-.ball {
+.circle {
+  display: inline-block;
   width: 50px;
   height: 50px;
-  background-color: #FFF;
-  border-radius: 100%;
-  top: 10px;
-  left:0;right:0;
-  margin:0 auto;
-  animation: ball 1s infinite;
-  position: absolute;
+  border-radius: 50%;
+  background: rgb(153, 44, 204);
 }
 
-@keyframes ball {
-  0% {
-    top: 6px;
-  }
-  5% {
-    top: 8px;
-  }
-  10% {
-    top: 12px;
-  }
-  15% {
-    top: 20px;
-  }
-  20% {
-    top: 38px;
-  }
+.gelatine {
+  animation: gelatine 0.75s ease infinite;
+}
+
+@keyframes gelatine {
   25% {
-    top: 72px;
+    transform: scale(0.9, 1.1);
   }
-  30% {
-    top: 100px;
-  }
-  35% {
-    top: 152px;
-  }
-  40% {
-    top: 154px;
-    height: 46px;
-    width: 54px;
-  }
+
   50% {
-    top: 176px;
-    height: 24px;
-    width: 72px;
+    transform: scale(1.1, 0.9);
   }
-  55% {
-    top: 162px;
-    height: 38px;
-    width: 58px;
-  }
-  60% {
-    top: 138px;
-    height: 48px;
-    width: 52px;
-  }
-  65% {
-    top: 110px;
-    height: 50px;
-    width: 50px;
-  }
-  70% {
-    top: 72px;
-  }
+
   75% {
-    top: 38px;
-  }
-  80% {
-    top: 20px;
-  }
-  85% {
-    top: 12px;
-  }
-  90% {
-    top: 8px;
-  }
-  95% {
-    top: 5px;
-  }
-  100% {
-    top: 5px;
+    transform: scale(0.95, 1.05);
   }
 }

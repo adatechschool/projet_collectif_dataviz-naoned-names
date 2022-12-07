@@ -56,7 +56,7 @@ async function getBirthPerYear(year, gender) {
   }
   console.log(arrBirthRateM);
 
-  document.getElementById("loader").remove();
+  document.getElementById("gelatine").remove();
 
   const ctx = document.getElementById("myChart");
 
