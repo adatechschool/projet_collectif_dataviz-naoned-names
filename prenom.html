@@ -14,10 +14,15 @@
                 <h1 class="h1_prenoms">Occurrence des prénoms donnés entre 2001 et 2021</h1>
         </div>
 
-      
-        <input type="text" placeholder="Entrez une valeur ici" id="in">
+        <input type="text" placeholder="Entrez un prénom ici" id="in">
         <button type="button" onclick="getValue();">Valider</button>
 
+        <div id="gelatine" hidden="true">
+                <div class="cell">
+                <div class="circle gelatine"></div>
+                <p id="loaderText">On récupère les données pour l'année</p>
+                </div>
+        </div>
 
         <div class="chart-container">
                 <canvas id="myChart"></canvas>

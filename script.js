@@ -39,23 +39,18 @@ async function getBirthPerYear(year, gender) {
   // const second = await getBirthPerYear(2011, "FILLE");
 
   let arrBirthRateF = [];
+  let arrBirthRateM = [];
   let arrYears = [
     2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012,
     2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021,
   ];
 
   for (let i = 0; i < arrYears.length; i++) {
-    await arrBirthRateF.push(await getBirthPerYear(arrYears[i], "FILLE"));
+    document.getElementById("loaderText").innerText = "On récupère les données pour l'année " + arrYears[i];
+    arrBirthRateF.push(await getBirthPerYear(arrYears[i], "FILLE"));
+    arrBirthRateM.push(await getBirthPerYear(arrYears[i], "GARCON"));
   }
-  console.log(arrBirthRateF);
-
-  let arrBirthRateM = [];
-
-  for (let i = 0; i < arrYears.length; i++) {
-    await arrBirthRateM.push(await getBirthPerYear(arrYears[i], "GARCON"));
-  }
-  console.log(arrBirthRateM);
-
+  
   document.getElementById("gelatine").remove();
 
   const ctx = document.getElementById("myChart");

@@ -15,12 +15,9 @@ async function getOccurrence(name, year) {
 async function getValue() {
   // Sélectionner l'élément input et récupérer sa valeur
   let input = document.getElementById("in").value;
-  // Afficher la valeur
-  // alert(input); 
 
-  // const first = await getOccurrence("Juliette", 2020)
-  // const second = await getOccurrence("Juliette", 2021)
-
+  document.getElementById("gelatine").hidden = false
+  
   let arrOccurrence = [];
   let arrYears = [
     2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012,
@@ -29,8 +26,11 @@ async function getValue() {
 
   for (let i = 0; i < arrYears.length; i++) {
     arrOccurrence.push(await getOccurrence(input, arrYears[i]));
+    document.getElementById("loaderText").innerText = "On récupère les données pour l'année " + arrYears[i];
   }
-  console.log(arrOccurrence);
+  // console.log(arrOccurrence);
+
+  document.getElementById("gelatine").hidden = true
 
   const ctx = document.getElementById("myChart");
 
